@@ -10,5 +10,5 @@ Gem::Specification.new do |s|
   s.license     = 'GPL-3'
 
   s.add_development_dependency('json', "~> 1.8.1")
-
+  
 end
