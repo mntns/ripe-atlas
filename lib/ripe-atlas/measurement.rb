@@ -1,5 +1,5 @@
 module ATLAS
   class Measurement
-    # TODO
+    def initialize
   end
 end
