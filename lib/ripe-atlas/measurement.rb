@@ -1,5 +1,4 @@
-module ATLAS
+module Atlas
   class Measurement
-    def initialize
   end
 end
