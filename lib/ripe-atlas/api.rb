@@ -1,9 +1,16 @@
 require 'json'
+require 'net/http'
 
 module Atlas
-  def Atlas.get_probe(id)
-    @res = Atlas::Http.get("probe", {:id => id})
-    @probe = Atlas::Probe.new(JSON.parse(@res)["objects"].first)
-    puts @probe
+  API_URL = "https://atlas.ripe.net/api/v1/probe/"
+
+  def get_probe_by_id(id)
+    @uri = URI(API_URL + "?id=" + id)
+    @res = Net::HTTP.get @uri
+    @json = JSON.parse @res
+    
+    @probe = Atlas::Probe.new(@json["objects"].first)
+    return @probe  
   end
+
 end
