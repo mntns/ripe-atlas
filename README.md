@@ -8,7 +8,7 @@ ripe-atlas is a minimalistic API wrapper for the [RIPE Atlas](https://atlas.ripe
 
 First, you should require the gem:
 ```ruby
-require 'ripe-atlas`
+require 'ripe-atlas'
 ```
 
 Then you can get Atlas probes by specifiying parameters. I.e.:
