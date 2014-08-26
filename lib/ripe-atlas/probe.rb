@@ -6,9 +6,7 @@ module Atlas
   
     def initialize(p)
       p.each do |k,v| 
-        if k
-          send("#{k}=",v)
-        end
+        send("#{k}=",v)
       end
     end
 

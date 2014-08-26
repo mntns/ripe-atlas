@@ -21,8 +21,6 @@ module Atlas
     if @res.is_a? Net::HTTPSuccess
       @json = JSON.parse @res.body
     end
-    
-    p @json
 
     @objects = Array.new
     @json["objects"].each do |n|

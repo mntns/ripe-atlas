@@ -4,11 +4,10 @@ module Atlas
     :is_oneoff, :is_public, :msm_id, :probe_sources, :resolve_on_probe, :resolved_ips, :result, :start_time,
     :status, :stop_time, :type
    
+   # Just for Eliah Shure: (.)(.)
    def initialize(p)
     p.each do |k,v| 
-      if k
-        send("#{k}=",v)
-      end
+      send("#{k}=",v)
     end
    end
 
