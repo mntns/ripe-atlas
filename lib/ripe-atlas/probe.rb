@@ -5,7 +5,11 @@ module Atlas
       :is_public, :latitude, :longitude, :prefix_v4, :prefix_v6, :status, :status_name, :status_since    
   
     def initialize(p)
-      p.each {|k,v| send("#{k}=",v)}
+      p.each do |k,v| 
+        if k
+          send("#{k}=",v)
+        end
+      end
     end
 
   end  
