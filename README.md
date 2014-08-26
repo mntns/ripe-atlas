@@ -6,27 +6,27 @@ ripe-atlas is a minimalistic API wrapper for the [RIPE Atlas](https://atlas.ripe
 ## Installation
 Since ripe-atlas is currently not hosted on RubyGems.org, you have to install it manually. 
 
-First, clone the GitHub repository:
-```shell
+1. Clone the GitHub repository. 
+```bash
 git clone https://github.com/EddyShure/ripe-atlas.git
 ```
 
-Now, navigate into the created directory and build the Gem:
-```shell
+2. Navigate into the created directory and build the gem.
+```bash
 cd ripe-atlas/
 gem build ripe-atlas.gemspec
 ```
 
-The last step: Install it!
-```shell
+3. Install the gem.
+```bash
 gem install ripe-atlas-*.gem
 ```
 
-Congratulations! Now you can use the ripe-atlas Gem.
+Congrats, now you can use the ripe-atlas gem!
 
 ## Usage
 
-To use the Gem, you should require it first:
+To use the gem, you should require it first:
 ```ruby
 require 'ripe-atlas'
 ```
@@ -47,10 +47,17 @@ we should get just one probe object in the array. It could look like this:
 @longitude=139.7485, @prefix_v4="126.15.0.0/16", @prefix_v6="2400:2000::/20", @status=1, @status_name="Connected", @status_since=1408477001>] 
 ```
 
+### Getting Atlas measurements
+
+To get measurement objects, you can use 'Atlas.get_measurements'.
+```ruby
+Atlas.get_measurements({:status => 3})
+```
+
 ##TODO
-* Add measurement and probe-participation-request
+* Add probe-participation-request
 * Publish gem on RubyGems.org
-* Clean up code. 
+* Clean up code
 
 
 ## Donate
