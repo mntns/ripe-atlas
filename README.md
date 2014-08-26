@@ -33,4 +33,4 @@ we should get just one probe object in the array. It could look like this:
 
 If you would like to support me, you can buy me a bottle of Club Mate via GitTip:
 
-<script data-gittip-username="EddyShure" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
+<script data-gittip-username="EddyShure" data-gittip-widget="button" src="https://gttp.co/v1.js"></script>
