@@ -6,18 +6,18 @@ ripe-atlas is a minimalistic API wrapper for the [RIPE Atlas](https://atlas.ripe
 ## Installation
 Since ripe-atlas is currently not hosted on RubyGems.org, you have to install it manually. 
 
-1. Clone the GitHub repository. 
+Clone the GitHub repository. 
 ```bash
 git clone https://github.com/EddyShure/ripe-atlas.git
 ```
 
-2. Navigate into the created directory and build the gem.
+Navigate into the created directory and build the gem.
 ```bash
 cd ripe-atlas/
 gem build ripe-atlas.gemspec
 ```
 
-3. Install the gem.
+Install the gem.
 ```bash
 gem install ripe-atlas-*.gem
 ```
