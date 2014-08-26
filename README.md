@@ -3,16 +3,40 @@
 
 ripe-atlas is a minimalistic API wrapper for the [RIPE Atlas](https://atlas.ripe.net) API. It is written entirely in Ruby.
 
+## Installation
+Since ripe-atlas is currently not hosted on RubyGems.org, you have to install it manually. 
+
+First, clone the GitHub repository:
+```shell
+git clone https://github.com/EddyShure/ripe-atlas.git
+```
+
+Now, navigate into the created directory and build the Gem:
+```shell
+cd ripe-atlas/
+gem build ripe-atlas.gemspec
+```
+
+The last step: Install it!
+```shell
+gem install ripe-atlas-*.gem
+```
+
+Congratulations! Now you can use the ripe-atlas Gem.
+
 ## Usage
 
-First, you should require the gem:
+To use the Gem, you should require it first:
 ```ruby
 require 'ripe-atlas'
 ```
 
-Then you can get Atlas probes by specifiying parameters. I.e.:
+### Getting Atlas probes
+
+To get RIPE Atlas probes, you can use 'Atlas.get_probes'.
+
 ```ruby
-Atlas.get_probe({:id => 333})
+Atlas.get_probes({:id => 333})
 ```
 
 This should give you an array with the Atlas probes. Since we specified the exact ID of the probe, 
