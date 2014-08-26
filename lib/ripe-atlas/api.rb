@@ -47,4 +47,14 @@ module Atlas
     @measurements = get_object(1, p)
     return @measurements
   end
+
+  def self.delete_measurement(id, key)
+    @uri = URI("https://atlas.ripe.net/api/v1/measurement/" + "#{id}/" + "?key=" + key)
+    @res = Net::HTTP.delete(@uri)
+    if @res.is_a? Net::HTTPSuccess
+      return true
+    else
+      return false
+    end
+  end
 end
