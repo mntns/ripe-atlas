@@ -5,7 +5,11 @@ module Atlas
     :status, :stop_time, :type
    
    def initialize(p)
-    p.each {|k,v| send("#{k}=",v)}
+    p.each do |k,v| 
+      if k
+        send("#{k}=",v)
+      end
+    end
    end
 
   end
