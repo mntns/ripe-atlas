@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
     
   s.name        = 'ripe-atlas'
-  s.version     = '0.0.1'
-  s.date        = '2014-08-26'
+  s.version     = '0.0.2'
+  s.date        = '2014-08-27'
   s.summary     = "A Ruby gem for the RIPE Atlas API."
-  s.description = "A Ruby gem for doing things with the RIPE Atlas API."
+  s.description = "A Ruby gem for doing $things with the RIPE Atlas API."
   s.authors     = ["Eddy Shure"]
   s.files       = `git ls-files`.split($/)
   s.license     = 'GPL-3'

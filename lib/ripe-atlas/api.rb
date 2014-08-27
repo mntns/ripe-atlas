@@ -37,10 +37,24 @@ module Atlas
     return @measurements
   end
 
-  def self.stop_measurement(id, key)
-    @url = API + "measurement/" + "#{id}/" + "?key=" + key.to_str
-    @res = RestClient.delete(@url)
+  def self.get_measurement(id)
+    @url = API + "measurement/#{id}/"
+    @res = RestClient.get(@url, {:accept => :json})
+
     if @res.code == 200
+      @json = JSON.parse @res.body
+    end
+
+    @measurement = Atlas::Measurement.new(@json["object"])
+    return @measurement
+  end
+
+  def self.stop_measurement(id, key)
+    @url = API + "measurement/" + "#{id}/" + "?key=" + key
+    @res = RestClient.delete(@url)
+    p @res
+    puts @res.code
+    if @res.code == 204
       return true
     else
       return false
