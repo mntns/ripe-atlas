@@ -47,12 +47,14 @@ we should get just one probe object in the array. It could look like this:
 @longitude=139.7485, @prefix_v4="126.15.0.0/16", @prefix_v6="2400:2000::/20", @status=1, @status_name="Connected", @status_since=1408477001>] 
 ```
 
-### Getting Atlas measurements
+### Getting measurements
 
 To get measurement objects, you can use 'Atlas.get_measurements'.
 ```ruby
 Atlas.get_measurements({:status => 3})
 ```
+
+### Stopping measurements
 
 ##TODO
 * Add probe-participation-request
