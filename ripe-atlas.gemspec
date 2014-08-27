@@ -1,13 +1,15 @@
 Gem::Specification.new do |s|
     
   s.name        = 'ripe-atlas'
-  s.version     = '0.0.2'
+  s.version     = '0.1.1'
   s.date        = '2014-08-27'
   s.summary     = "A Ruby gem for the RIPE Atlas API."
-  s.description = "A Ruby gem for doing $things with the RIPE Atlas API."
+  s.description = "ripe-atlas is an API wrapper for the RIPE Atlas API. You can get probes and measurements and even stop measurements."
   s.authors     = ["Eddy Shure"]
   s.files       = `git ls-files`.split($/)
-  s.license     = 'GPL-3'
+  s.licenses    = ['MIT']
+  s.homepage    = 'https://github.com/EddyShure/ripe-atlas'
+  s.required_ruby_version = '>= 1.9'
 
   s.add_development_dependency('json', "~> 1.8.1")
   s.add_development_dependency('rest-client', "~> 1.7.2")  
