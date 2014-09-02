@@ -2,7 +2,7 @@ module Atlas
 end
 
 require 'ripe-atlas/version'
-require 'ripe-atlas/api'
+require 'ripe-atlas/client'
 require 'ripe-atlas/probe'
 require 'ripe-atlas/measurement'
 

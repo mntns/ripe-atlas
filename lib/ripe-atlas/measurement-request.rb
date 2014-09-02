@@ -3,6 +3,6 @@ require 'json'
 
 module Atlas
   class MeasurementRequest
-    
+        
   end
 end

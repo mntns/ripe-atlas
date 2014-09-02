@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
     
   s.name        = 'ripe-atlas'
-  s.version     = '0.1.1'
+  s.version     = '0.2.0'
   s.date        = '2014-08-27'
   s.summary     = "A Ruby gem for the RIPE Atlas API."
   s.description = "ripe-atlas is an API wrapper for the RIPE Atlas API. You can get probes and measurements and even stop measurements."
