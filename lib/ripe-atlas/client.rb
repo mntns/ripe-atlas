@@ -1,6 +1,3 @@
-require 'json'
-require 'rest_client'
-
 module Atlas
   class Client
     attr_accessor :key
@@ -9,7 +6,7 @@ module Atlas
 
     def initialize(key)
       if key.is_a? String
-        @key = key
+        send("key=", key)
       end
     end
 

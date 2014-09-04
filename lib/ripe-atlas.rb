@@ -1,3 +1,7 @@
+require 'json'
+require 'rest_client'
+#require 'time'
+
 module Atlas
 end
 
