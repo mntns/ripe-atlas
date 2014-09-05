@@ -4,8 +4,8 @@ module Atlas
     
     API = "https://atlas.ripe.net/api/v1/"
 
-    def initialize(key)
-      if key.is_a? String
+    def initialize(key = nil)
+      if key.is_a? String and key != nil
         send("key=", key)
       end
     end
@@ -55,8 +55,11 @@ module Atlas
       return @measurement
     end
 
-    def stop_measurement(id, key)
-      @url = API + "measurement/" + "#{id}/" + "?key=" + key
+    def stop_measurement(id)
+      if self.key == nil
+        raise "Specify an API key!"
+      end
+      @url = API + "measurement/" + "#{id}/" + "?key=" + self.key
       @res = RestClient.delete(@url)
       p @res
       puts @res.code

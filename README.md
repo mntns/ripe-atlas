@@ -7,26 +7,15 @@ At the current state of development, you can:
 - Get measurements
 - Stop measurements
 
+---
+
 ## Installation
-Since ripe-atlas is currently not hosted on RubyGems.org, you have to install it manually. 
-
-Clone the GitHub repository. 
-```bash
-git clone https://github.com/EddyShure/ripe-atlas.git
+```ruby
+gem install ripe-atlas
 ```
+Congratulations, now you can use the ripe-atlas gem!
 
-Navigate into the created directory and build the gem.
-```bash
-cd ripe-atlas/
-gem build ripe-atlas.gemspec
-```
-
-Install the gem.
-```bash
-gem install ripe-atlas-*.gem
-```
-
-Congrats, now you can use the ripe-atlas gem!
+---
 
 ## Usage
 
@@ -35,32 +24,33 @@ To use the gem, you should require it first:
 require 'ripe-atlas'
 ```
 
+Then you should create a client. You can pass an API key:
+```ruby
+client = Atlas::Client.new "1234-1234-1234-1234"
+```
+Now, you should be able to do some magic with your freshly initialized client:
+
 ### Getting Atlas probes
 
-To get RIPE Atlas probes, you can use 'Atlas.get_probes'.
+To get RIPE Atlas probes, you can use #get_probes.
 
 ```ruby
-Atlas.get_probes({:id => 333})
+client.get_probes({:id => 333})
 ```
 To get a list of all parameters, visit this site: https://atlas.ripe.net/docs/rest/#probe
 
 ### Getting measurements
 
-To get measurement objects, you can use 'Atlas.get_measurements'.
+To get measurement objects, you can use #get_measurements.
 ```ruby
-Atlas.get_measurements({:status => 3})
+client.get_measurements({:status => 3})
 ```
 List of all parameters: https://atlas.ripe.net/docs/rest/#measurement
 
 ### Stopping measurements
 ```ruby
-Atlas.stop_measurement(id, "api-key")
+client.stop_measurement(id)
 ```
-
-##TODO
-* Add probe-participation-request
-* Clean up code
-* Add MeasurementRequest
 
 ## Donate
 
