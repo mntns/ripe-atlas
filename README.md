@@ -54,8 +54,10 @@ client.stop_measurement(id)
 
 ## Donate
 
-If you would like to support me, you can buy me a bottle of Club Mate via GitTip:
+If you would like to support me or buy me a bottle of Club Mate, you can do it here:
 
 <a href="https://www.gittip.com/EddyShure/">
   <img alt="Support via Gittip" src="https://rawgithub.com/twolfson/gittip-badge/0.2.0/dist/gittip.png"/>
 </a>
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=EddyShure&url=https://github.com/EddyShure/ripe-atlas&title=ripe-atlas&language=Ruby&tags=github&category=software)
